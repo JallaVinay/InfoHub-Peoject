@@ -26,7 +26,7 @@ const CurrecncyConverter = () => {
     }
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:5000/currency?amount=${n}`);
+      const res = await fetch(`https://infohub-peoject-backend.onrender.com/currency?amount=${n}`);
       if (!res.ok) throw new Error();
       const data = await res.json();
       setUsd(data.usd);
